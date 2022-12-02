@@ -3,9 +3,9 @@ pipeline {
     stages {
         stage('my Build') {
             steps {  
-                sh 'cd /home/slave/workspace/dectwo/target'
                 sh "echo ${BUILD_VERSION}"
                 sh 'mvn deploy'
+                sh 'pwd'
             }
         }    
         stage( 'my deploy' ) {
