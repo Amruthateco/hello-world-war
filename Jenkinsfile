@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('my Build') {
             steps {
-             dir ("/home/slave/new") {
+             dir ("/home/slaveone/new") {
                 sh 'mkdir test'
              }
                 sh "echo ${BUILD_VERSION}"
