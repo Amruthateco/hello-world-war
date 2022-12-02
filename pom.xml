@@ -28,8 +28,8 @@
 	<distributionManagement>
                                 <repository>
                                             <id>central</id>
-                                            <name>a0hbzrhdawwp3-artifactory-primary-0-releases</name>
-                                            <url>https://prajwal1327.jfrog.io/artifactory/libs-release-local</url>
+                                            <name>a0m7fazm6gtfs-artifactory-primary-0-releases</name>
+                                            <url>https://ranga.jfrog.io/artifactory/libs-release-local</url>
                                 </repository>
         </distributionManagement>
 
