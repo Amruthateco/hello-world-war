@@ -2,10 +2,8 @@ pipeline {
     agent {label 'slaveone'}
     stages {
         stage('my Build') {
-            steps {
-             dir ("/home/slaveone/new") {
-                sh 'mkdir test'
-             }
+            steps {  
+                sh 'cd /home/slave/workspace/dectwo/target'
                 sh "echo ${BUILD_VERSION}"
                 sh 'mvn deploy'
             }
