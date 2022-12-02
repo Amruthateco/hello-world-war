@@ -1,5 +1,5 @@
 pipeline {
-    agent {label 'sla'}
+    agent {label 'slaveone'}
     stages {
         stage('my Build') {
             steps {
@@ -11,9 +11,9 @@ pipeline {
             }
         }    
         stage( 'my deploy' ) {
-        agent {label 'service'} 
+        agent {label 'slavetwo'} 
             steps {
-               sh 'curl -u prajwalmore336@gmail.com:Admin@123 -O https://prajwal1327.jfrog.io/artifactory/libs-release-local/com/efsavage/hello-world-war/${BUILD_VERSION}/hello-world-war-${BUILD_VERSION}.war'
+               sh 'curl -u rangalakshmirt@gmail.com:Admin@123 -O https://ranga.jfrog.io/artifactory/libs-release-local/com/efsavage/hello-world-war/${BUILD_VERSION}/hello-world-war-${BUILD_VERSION}.war'
                sh 'cp -R hello-world-war-${BUILD_VERSION}.war /opt/tomcat/webapps/' 
                sh 'sudo sh /opt/tomcat/bin/shutdown.sh'
                sh 'sleep 2'
