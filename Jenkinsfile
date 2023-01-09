@@ -1,22 +1,27 @@
 pipeline {
-    agent {label 'slaveone'}
-    stages {
-        stage('my Build') {
-            steps {  
-                sh "echo ${BUILD_VERSION}"
-                sh 'mvn deploy'
-                sh 'pwd'
-            }
-        }    
-        stage( 'my deploy' ) {
-        agent {label 'slavetwo'} 
-            steps {
-               sh 'curl -u rangalakshmirt@gmail.com:Admin@123 -O https://ranga.jfrog.io/artifactory/libs-release-local/com/efsavage/hello-world-war/${BUILD_VERSION}/hello-world-war-${BUILD_VERSION}.war'
-               sh 'cp -R hello-world-war-${BUILD_VERSION}.war /opt/tomcat/webapps/' 
-               sh 'sudo sh /opt/tomcat/bin/shutdown.sh'
-               sh 'sleep 3'
-               sh 'sudo sh /opt/tomcat/bin/startup.sh' 
-            }
-        }    
+  agent {label 'slaveone'}
+  stages {
+    stage ('my build') {
+      steps {
+        sh "echo ${BUILD_VERSION}"
+        sh "docker build -t mytomcat ."
+      }
+    }
+    stage ('publish stage') {
+      steps {
+        sh "echo ${BUILD_VERSION}"
+        sh 'docker login -u rangalakshmi123 -p WhatTheHeck@99'
+        sh 'docker tag mytomcat rangalakshmi123/jenkins:${BUILD_VERSION}'
+        sh 'docker push rangalakshmi123/jenkins:${BUILD_VERSION}'
+      }
+    }
+    stage ('my deploy') {
+      agent {label 'slavetwo'}
+      steps {
+        sh 'docker pull rangalakshmi123/jenkins:${BUILD_VERSION}'
+        sh 'docker rm -f mytomcat'
+        sh 'docker run -d -p 8085:8080 --name abc rangalakshmi123/jenkins:${BUILD_VERSION}'
+      }
     } 
+  }
 }
