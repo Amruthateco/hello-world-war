@@ -10,7 +10,7 @@ pipeline {
     stage ('publish stage') {
       steps {
         sh "echo ${BUILD_VERSION}"
-        sh 'docker login -u rangalakshmi123 -p WhatTheHeck@99'
+        sh 'docker login -u rangalakshmi123 -p xxxxxx'
         sh 'docker tag mytomcat rangalakshmi123/jenkins:${BUILD_VERSION}'
         sh 'docker push rangalakshmi123/jenkins:${BUILD_VERSION}'
       }
