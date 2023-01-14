@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title> Rangalakshmi profile </title>
+  <title> KP trek </title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 .card {
@@ -43,9 +43,9 @@ button:hover, a:hover {
 
 <div class="card">
   <img src="./image.jpeg" alt="John" style="width:100%">
-  <h1>Rangalakshmi R T</h1>
-  <p class="title">Devops Profile</p>
-  <p>Beginner</p>
+  <h1>Kumara parvatha</h1>
+  <p class="title">Treks in karnataka</p>
+  <p>KP summit</p>
   <div style="margin: 24px 0;">
     <a href="#"><i class="fa fa-dribbble"></i></a> 
     <a href="#"><i class="fa fa-twitter"></i></a>  
