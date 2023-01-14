@@ -43,7 +43,7 @@ button:hover, a:hover {
 
 <div class="card">
   <img src="./image.jpeg" alt="John" style="width:100%">
-  <h1>rangalakshmi R T</h1>
+  <h1>Rangalakshmi R T</h1>
   <p class="title">Devops Profile</p>
   <p>Beginner</p>
   <div style="margin: 24px 0;">
