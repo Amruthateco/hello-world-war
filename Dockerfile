@@ -4,4 +4,4 @@ COPY . .
 RUN mvn clean package
 
 FROM tomcat:9.0
-COPY --from=build_stage /lakshmi/target/hello-world-war-null.war /usr/local/tomcat/webapps/
+COPY --from=build_stage /lakshmi/target/hello-world-war-$"BUILD_VERSION".war /usr/local/tomcat/webapps/
