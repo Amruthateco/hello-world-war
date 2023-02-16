@@ -1,0 +1,11 @@
+selector_matchlabels: tomcat
+deployment_name: tomcat
+replicas: 2
+registry_name: rangalakshmi123
+docker_repo_name: lakshmi
+image_tag: 14.3
+port_name: tomcat
+target_port: 8080
+port: 8080
+favorite:
+  food: pizza 
