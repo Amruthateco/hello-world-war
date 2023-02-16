@@ -42,7 +42,7 @@ button:hover, a:hover {
 <h2 style="text-align:center">User Profile Card</h2>
 
 <div class="card">
-  <img src="./image.jpeg" alt="John" style="width:100%">
+  <img src="./mountain.jpeg" alt="KP" style="width:100%">
   <h1>Kumara parvatha</h1>
   <p class="title">Treks in karnataka</p>
   <p>KP summit</p>
